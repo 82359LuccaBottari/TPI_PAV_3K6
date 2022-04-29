@@ -59,6 +59,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.afiliadoToolStripMenuItem,
             this.reintegroToolStripMenuItem,
@@ -69,7 +70,7 @@
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(622, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,7 +121,7 @@
             // consultarReintegroToolStripMenuItem
             // 
             this.consultarReintegroToolStripMenuItem.Name = "consultarReintegroToolStripMenuItem";
-            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.consultarReintegroToolStripMenuItem.Text = "Consultar Reintegro";
             // 
             // odontologosToolStripMenuItem
@@ -138,6 +139,7 @@
             this.aBMOdontologoToolStripMenuItem.Name = "aBMOdontologoToolStripMenuItem";
             this.aBMOdontologoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.aBMOdontologoToolStripMenuItem.Text = "ABM Odontologo";
+            this.aBMOdontologoToolStripMenuItem.Click += new System.EventHandler(this.aBMOdontologoToolStripMenuItem_Click);
             // 
             // aBMHistorialTrabajoToolStripMenuItem
             // 
@@ -210,6 +212,7 @@
             this.aBMPrestacionesToolStripMenuItem.Name = "aBMPrestacionesToolStripMenuItem";
             this.aBMPrestacionesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.aBMPrestacionesToolStripMenuItem.Text = "ABM Prestaciones";
+            this.aBMPrestacionesToolStripMenuItem.Click += new System.EventHandler(this.aBMPrestacionesToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
@@ -256,12 +259,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.descarga;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(942, 563);
+            this.ClientSize = new System.Drawing.Size(622, 442);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Inicio";
             this.Text = "Auditoria Odontologica";
-            this.Load += new System.EventHandler(this.Frm_Inicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

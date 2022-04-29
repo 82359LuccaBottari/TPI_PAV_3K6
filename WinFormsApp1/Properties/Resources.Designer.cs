@@ -83,6 +83,16 @@ namespace TPPAV1_Auditoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nomenclatura_dental_universal {
+            get {
+                object obj = ResourceManager.GetObject("nomenclatura_dental_universal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_plus_plus {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-plus-plus", resourceCulture);

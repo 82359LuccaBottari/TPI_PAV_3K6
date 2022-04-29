@@ -16,10 +16,5 @@ namespace TPPAV1_Auditoria.Formularios.Reintegros
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

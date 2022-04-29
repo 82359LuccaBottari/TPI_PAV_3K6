@@ -32,10 +32,16 @@ namespace WinFormsApp1.Clases
             Cmd.CommandText = sql;
             DataTable tabla = new DataTable();
             tabla.Load(Cmd.ExecuteReader());
-            Cerrar();
+            Cerrar(); 
             return tabla;
         }
-
+        public void Insertar (string sqlInsertar)
+        {
+            Conectar();
+            Cmd.CommandText = sqlInsertar;
+            Cmd.ExecuteNonQuery();
+            Cerrar();
+        }
     }
 
 
