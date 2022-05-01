@@ -114,7 +114,7 @@
             // aBMReintegroToolStripMenuItem
             // 
             this.aBMReintegroToolStripMenuItem.Name = "aBMReintegroToolStripMenuItem";
-            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.aBMReintegroToolStripMenuItem.Text = "ABM Reintegro";
             this.aBMReintegroToolStripMenuItem.Click += new System.EventHandler(this.aBMReintegroToolStripMenuItem_Click);
             // 
@@ -167,6 +167,7 @@
             this.aBMAtencionesToolStripMenuItem.Name = "aBMAtencionesToolStripMenuItem";
             this.aBMAtencionesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.aBMAtencionesToolStripMenuItem.Text = "ABM Atenciones";
+            this.aBMAtencionesToolStripMenuItem.Click += new System.EventHandler(this.aBMAtencionesToolStripMenuItem_Click);
             // 
             // consultarAtencionesToolStripMenuItem
             // 
