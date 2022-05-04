@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Formularios\Afiliados\" />
     <Folder Include="Formularios\Historiales Clinicos\" />
     <Folder Include="Formularios\Historiales de trabajos\" />
     <Folder Include="Formularios\Reportes\" />

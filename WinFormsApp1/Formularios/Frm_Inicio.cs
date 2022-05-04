@@ -2,6 +2,7 @@ using TPPAV1_Auditoria.Formularios.Odontologos;
 using TPPAV1_Auditoria.Formularios.Prestaciones;
 using TPPAV1_Auditoria.Formularios.Reintegros;
 using TPPAV1_Auditoria.Formularios.Atenciones;
+using TPPAV1_Auditoria.Formularios.Afiliados;
 
 namespace WinFormsApp1
 {
@@ -35,6 +36,12 @@ namespace WinFormsApp1
         {
             Frm_ABM_Atenciones ABM_Atenciones = new Frm_ABM_Atenciones();
             ABM_Atenciones.ShowDialog();
+        }
+
+        private void aBMAfiliadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Afiliados ABM_Afiliados = new Frm_ABM_Afiliados();
+            ABM_Afiliados.ShowDialog();
         }
     }
 }

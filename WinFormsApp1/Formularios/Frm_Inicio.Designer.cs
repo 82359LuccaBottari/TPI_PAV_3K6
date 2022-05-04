@@ -89,6 +89,7 @@
             this.aBMAfiliadoToolStripMenuItem.Name = "aBMAfiliadoToolStripMenuItem";
             this.aBMAfiliadoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.aBMAfiliadoToolStripMenuItem.Text = "ABM Afiliado";
+            this.aBMAfiliadoToolStripMenuItem.Click += new System.EventHandler(this.aBMAfiliadoToolStripMenuItem_Click);
             // 
             // aBMToolStripMenuItem
             // 
@@ -114,14 +115,14 @@
             // aBMReintegroToolStripMenuItem
             // 
             this.aBMReintegroToolStripMenuItem.Name = "aBMReintegroToolStripMenuItem";
-            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aBMReintegroToolStripMenuItem.Text = "ABM Reintegro";
             this.aBMReintegroToolStripMenuItem.Click += new System.EventHandler(this.aBMReintegroToolStripMenuItem_Click);
             // 
             // consultarReintegroToolStripMenuItem
             // 
             this.consultarReintegroToolStripMenuItem.Name = "consultarReintegroToolStripMenuItem";
-            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarReintegroToolStripMenuItem.Text = "Consultar Reintegro";
             // 
             // odontologosToolStripMenuItem

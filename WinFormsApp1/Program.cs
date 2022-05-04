@@ -1,3 +1,5 @@
+using TPPAV1_Auditoria.Formularios.Afiliados;
+
 namespace WinFormsApp1
 {
     internal static class Program
@@ -12,6 +14,7 @@ namespace WinFormsApp1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Frm_Inicio());
+            //Application.Run(new Frm_ABM_Afiliados());
             //Application.Run(new TPPAV1_Auditoria.Formularios.Odontologos.Frm_ABM_Odontologo());
             //Application.Run(new TPPAV1_Auditoria.Formularios.Odontologos.Frm_odontologo_Alta());
         }
