@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ABM_Afiliados));
             this.txt_nro_afiliado = new System.Windows.Forms.TextBox();
-            this.btn_consulta = new System.Windows.Forms.GroupBox();
+            this.gb_ConsultaAfiliados = new System.Windows.Forms.GroupBox();
             this.cmb_categorias = new WinFormsApp1.Clases.ComboBox01();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.lb_nro_afiliado = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_consulta.SuspendLayout();
+            this.gb_ConsultaAfiliados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_afiliados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,30 +62,32 @@
             this.txt_nro_afiliado.TabIndex = 0;
             this.toolTip1.SetToolTip(this.txt_nro_afiliado, "Ingresar número de afiliado\r\nque desea buscar\r\n");
             // 
-            // btn_consulta
+            // gb_ConsultaAfiliados
             // 
-            this.btn_consulta.Controls.Add(this.cmb_categorias);
-            this.btn_consulta.Controls.Add(this.btn_eliminar);
-            this.btn_consulta.Controls.Add(this.btn_modificar);
-            this.btn_consulta.Controls.Add(this.btn_agregar);
-            this.btn_consulta.Controls.Add(this.chk_todos);
-            this.btn_consulta.Controls.Add(this.grid_afiliados);
-            this.btn_consulta.Controls.Add(this.btn_consulta_afiliados);
-            this.btn_consulta.Controls.Add(this.button1);
-            this.btn_consulta.Controls.Add(this.lb_categoria);
-            this.btn_consulta.Controls.Add(this.lb_nro_afiliado);
-            this.btn_consulta.Controls.Add(this.txt_nro_afiliado);
-            this.btn_consulta.Controls.Add(this.pictureBox1);
-            this.btn_consulta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_consulta.Location = new System.Drawing.Point(12, 12);
-            this.btn_consulta.Name = "btn_consulta";
-            this.btn_consulta.Size = new System.Drawing.Size(569, 498);
-            this.btn_consulta.TabIndex = 2;
-            this.btn_consulta.TabStop = false;
-            this.btn_consulta.Text = "Consulta Afiliados";
+            this.gb_ConsultaAfiliados.Controls.Add(this.cmb_categorias);
+            this.gb_ConsultaAfiliados.Controls.Add(this.btn_eliminar);
+            this.gb_ConsultaAfiliados.Controls.Add(this.btn_modificar);
+            this.gb_ConsultaAfiliados.Controls.Add(this.btn_agregar);
+            this.gb_ConsultaAfiliados.Controls.Add(this.chk_todos);
+            this.gb_ConsultaAfiliados.Controls.Add(this.grid_afiliados);
+            this.gb_ConsultaAfiliados.Controls.Add(this.btn_consulta_afiliados);
+            this.gb_ConsultaAfiliados.Controls.Add(this.button1);
+            this.gb_ConsultaAfiliados.Controls.Add(this.lb_categoria);
+            this.gb_ConsultaAfiliados.Controls.Add(this.lb_nro_afiliado);
+            this.gb_ConsultaAfiliados.Controls.Add(this.txt_nro_afiliado);
+            this.gb_ConsultaAfiliados.Controls.Add(this.pictureBox1);
+            this.gb_ConsultaAfiliados.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gb_ConsultaAfiliados.Location = new System.Drawing.Point(12, 12);
+            this.gb_ConsultaAfiliados.Name = "gb_ConsultaAfiliados";
+            this.gb_ConsultaAfiliados.Size = new System.Drawing.Size(569, 498);
+            this.gb_ConsultaAfiliados.TabIndex = 2;
+            this.gb_ConsultaAfiliados.TabStop = false;
+            this.gb_ConsultaAfiliados.Text = "Consulta Afiliados";
             // 
             // cmb_categorias
             // 
+            this.cmb_categorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_categorias.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmb_categorias.FormattingEnabled = true;
             this.cmb_categorias.Location = new System.Drawing.Point(116, 115);
             this.cmb_categorias.Name = "cmb_categorias";
@@ -105,6 +107,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(76, 60);
             this.btn_eliminar.TabIndex = 6;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -115,6 +118,7 @@
             this.btn_modificar.Size = new System.Drawing.Size(82, 60);
             this.btn_modificar.TabIndex = 7;
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_agregar
             // 
@@ -125,10 +129,12 @@
             this.btn_agregar.Size = new System.Drawing.Size(85, 60);
             this.btn_agregar.TabIndex = 5;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // chk_todos
             // 
             this.chk_todos.AutoSize = true;
+            this.chk_todos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.chk_todos.Location = new System.Drawing.Point(116, 162);
             this.chk_todos.Name = "chk_todos";
             this.chk_todos.Size = new System.Drawing.Size(68, 24);
@@ -141,12 +147,14 @@
             // 
             this.grid_afiliados.AllowUserToAddRows = false;
             this.grid_afiliados.AllowUserToDeleteRows = false;
-            this.grid_afiliados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_afiliados.BackgroundColor = System.Drawing.Color.Lavender;
+            this.grid_afiliados.ColumnHeadersHeight = 30;
             this.grid_afiliados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
+            this.grid_afiliados.GridColor = System.Drawing.Color.Lavender;
             this.grid_afiliados.Location = new System.Drawing.Point(17, 192);
             this.grid_afiliados.Name = "grid_afiliados";
             this.grid_afiliados.ReadOnly = true;
@@ -156,30 +164,31 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Numero Afiliado";
+            this.Column1.HeaderText = "Número Afiliado";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 110;
+            this.Column1.Width = 130;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Codigo Categoria";
+            this.Column2.HeaderText = "Código Categoria";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 135;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Apellido";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.Column3.Width = 115;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Nombre";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.Column4.Width = 90;
             // 
             // btn_consulta_afiliados
             // 
@@ -230,7 +239,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.descarga_removebg_preview;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(144, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(281, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(282, 182);
             this.pictureBox1.TabIndex = 7;
@@ -249,15 +258,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 516);
-            this.Controls.Add(this.btn_consulta);
+            this.Controls.Add(this.gb_ConsultaAfiliados);
             this.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "Frm_ABM_Afiliados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Afiliados";
             this.Load += new System.EventHandler(this.Frm_ABM_Afiliados_Load);
-            this.btn_consulta.ResumeLayout(false);
-            this.btn_consulta.PerformLayout();
+            this.gb_ConsultaAfiliados.ResumeLayout(false);
+            this.gb_ConsultaAfiliados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_afiliados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -267,22 +278,22 @@
         #endregion
 
         private TextBox txt_nro_afiliado;
-        private GroupBox btn_consulta;
+        private GroupBox gb_ConsultaAfiliados;
         private Label lb_categoria;
         private Label lb_nro_afiliado;
         private Button button1;
         private DataGridView grid_afiliados;
         private CheckBox chk_todos;
         private PictureBox pictureBox1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
         private Button btn_eliminar;
         private Button btn_modificar;
         private Button btn_agregar;
         private WinFormsApp1.Clases.ComboBox01 cmb_categorias;
         private Button btn_consulta_afiliados;
         private ToolTip toolTip1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
     }
 }

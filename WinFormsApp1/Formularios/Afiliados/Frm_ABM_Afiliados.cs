@@ -12,7 +12,6 @@ using WinFormsApp1.Clases;
 using TPPAV1_Auditoria.Negocios;
 
 
-
 namespace TPPAV1_Auditoria.Formularios.Afiliados
 {
     public partial class Frm_ABM_Afiliados : Form
@@ -25,6 +24,7 @@ namespace TPPAV1_Auditoria.Formularios.Afiliados
         private void Frm_ABM_Afiliados_Load(object sender, EventArgs e)
         {
             cmb_categorias.CargarCombo();
+            cmb_categorias.SelectedIndex = -1;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,6 +65,24 @@ namespace TPPAV1_Auditoria.Formularios.Afiliados
                     grid_afiliados.Rows[i].Cells[3].Value = tabla.Rows[i]["_Nombre"].ToString();
                 }
             }
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            Frm_Afililiados_Alta Alta_Afiliados = new Frm_Afililiados_Alta();
+            Alta_Afiliados.Show();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_Afililiados_Baja Baja_Afiliados = new Frm_Afililiados_Baja();
+            Baja_Afiliados.Show();
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            Frm_Afililiados_Modificacion Modificacion_Afiliados = new Frm_Afililiados_Modificacion();
+            Modificacion_Afiliados.Show();
         }
     }
 }
