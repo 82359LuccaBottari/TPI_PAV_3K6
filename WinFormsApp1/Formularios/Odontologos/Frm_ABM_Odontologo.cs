@@ -76,6 +76,18 @@ namespace TPPAV1_Auditoria.Formularios.Odontologos
             Frm_odontologo_Alta altas = new Frm_odontologo_Alta();
             altas.ShowDialog();
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_Odontologo_Baja bajas = new Frm_Odontologo_Baja();
+            bajas.ShowDialog();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        { 
+            Frm_odontologo_Modificar modificar = new Frm_odontologo_Modificar();
+            modificar.ShowDialog();
+        }
     }
 
 }

@@ -135,28 +135,39 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
         {
             NE_prestaciones prestaciones = new NE_prestaciones();
             string codigo = mkt_codigoPrestacion.Text.Trim();
-            DataTable tabla = new DataTable();
-            tabla = prestaciones.Recuperar_Patron_CodigoPrestacion(codigo);
-            if (tabla.Rows.Count == 1)
+           
+            if (codigo != "")
             {
-                if (mkt_codigoPrestacion.Text.Trim() != "")
+                DataTable tabla = new DataTable();
+                tabla = prestaciones.Recuperar_Patron_CodigoPrestacion(codigo);
+                if (tabla.Rows.Count == 1)
                 {
-                    prestaciones.Eliminar(codigo);
-                    MessageBox.Show("Eliminación exitosa");
-                    LimpiarCampos();
+                    if (mkt_codigoPrestacion.Text.Trim() != "")
+                    {
+                        prestaciones.Eliminar(codigo);
+                        MessageBox.Show("Eliminación exitosa");
+                        LimpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inserte Codigo de prestacion");
+                        mkt_codigoPrestacion.Focus();
+                    }
+
                 }
-                else 
+                else
                 {
-                    MessageBox.Show("Inserte Codigo de prestacion");
+                    MessageBox.Show("Inserte codigo");
                     mkt_codigoPrestacion.Focus();
                 }
-                
+
             }
-            else
+            else 
             {
-                MessageBox.Show("Inserte codigo");
+                MessageBox.Show("Inserte un codigo de prestación válido");
                 mkt_codigoPrestacion.Focus();
             }
+            
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -165,6 +176,7 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
             string codigo = mkt_codigoPrestacion.Text;
             DataTable tabla = new DataTable();
             Be_Acceso_Datos _BD = new Be_Acceso_Datos();
+            
             if (codigo != "")
             {
                 tabla = prestaciones.Recuperar_Patron_CodigoPrestacion(codigo);
@@ -210,5 +222,6 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
             return;
 
         }
+        
     }
 }

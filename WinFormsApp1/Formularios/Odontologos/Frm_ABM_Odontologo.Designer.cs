@@ -172,28 +172,36 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(95, 563);
+            this.btn_agregar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.png_clipart_plus_plus;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar.Location = new System.Drawing.Point(51, 563);
             this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(50, 36);
+            this.btn_agregar.Size = new System.Drawing.Size(82, 50);
             this.btn_agregar.TabIndex = 6;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(178, 563);
+            this.btn_Modificar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources._269074;
+            this.btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Modificar.Location = new System.Drawing.Point(246, 563);
             this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(50, 36);
+            this.btn_Modificar.Size = new System.Drawing.Size(77, 50);
             this.btn_Modificar.TabIndex = 7;
             this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(264, 563);
+            this.btn_Eliminar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.png_transparent_logo_trademark_brand_delete_button_miscellaneous_text_trademark;
+            this.btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Eliminar.Location = new System.Drawing.Point(159, 563);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(50, 36);
+            this.btn_Eliminar.Size = new System.Drawing.Size(69, 50);
             this.btn_Eliminar.TabIndex = 8;
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Salir
             // 
@@ -226,7 +234,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_ABM_Odontologo";
             this.Text = "ABM Odontologos";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.grid_Odontologos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

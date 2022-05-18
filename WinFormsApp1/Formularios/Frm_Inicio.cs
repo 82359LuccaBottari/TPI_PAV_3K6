@@ -3,7 +3,7 @@ using TPPAV1_Auditoria.Formularios.Prestaciones;
 using TPPAV1_Auditoria.Formularios.Reintegros;
 using TPPAV1_Auditoria.Formularios.Atenciones;
 using TPPAV1_Auditoria.Formularios.Afiliados;
-
+using TPPAV1_Auditoria.Formularios.Expedientes;
 namespace WinFormsApp1
 {
     public partial class Frm_Inicio : Form
@@ -41,6 +41,17 @@ namespace WinFormsApp1
         private void aBMAfiliadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ABM_Afiliados ABM_Afiliados = new Frm_ABM_Afiliados();
+            ABM_Afiliados.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void atencionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Expedientes ABM_Afiliados = new Frm_ABM_Expedientes();
             ABM_Afiliados.ShowDialog();
         }
     }

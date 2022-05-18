@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ABM_Expedientes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_limpiar = new System.Windows.Forms.Button();
             this.msk_Reintegro = new System.Windows.Forms.MaskedTextBox();
             this.msk_nro_Expediente = new System.Windows.Forms.MaskedTextBox();
             this.Chk_Todos = new System.Windows.Forms.CheckBox();
@@ -47,7 +48,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_limpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Expediente)).BeginInit();
@@ -76,6 +76,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Restciicones de calculo";
+            // 
+            // btn_limpiar
+            // 
+            this.btn_limpiar.Location = new System.Drawing.Point(542, 75);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(64, 23);
+            this.btn_limpiar.TabIndex = 68;
+            this.btn_limpiar.Text = "limpiar ";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // msk_Reintegro
             // 
@@ -169,7 +179,7 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_agregar.BackgroundImage")));
+            this.btn_agregar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.png_clipart_plus_plus;
             this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregar.Location = new System.Drawing.Point(5, 303);
             this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
@@ -180,7 +190,7 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.BackgroundImage")));
+            this.btn_Modificar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources._269074;
             this.btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Modificar.Location = new System.Drawing.Point(74, 302);
             this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
@@ -191,7 +201,7 @@
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Eliminar.BackgroundImage")));
+            this.btn_Eliminar.BackgroundImage = global::TPPAV1_Auditoria.Properties.Resources.png_transparent_logo_trademark_brand_delete_button_miscellaneous_text_trademark;
             this.btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Eliminar.Location = new System.Drawing.Point(144, 302);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -244,16 +254,6 @@
             this.Column3.HeaderText = "Reintegro";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            // 
-            // btn_limpiar
-            // 
-            this.btn_limpiar.Location = new System.Drawing.Point(542, 75);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(64, 23);
-            this.btn_limpiar.TabIndex = 68;
-            this.btn_limpiar.Text = "limpiar ";
-            this.btn_limpiar.UseVisualStyleBackColor = true;
-            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // Frm_ABM_Expedientes
             // 

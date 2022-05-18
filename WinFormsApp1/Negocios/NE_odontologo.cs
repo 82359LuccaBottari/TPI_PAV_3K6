@@ -53,5 +53,17 @@ namespace TPPAV1_Auditoria.Negocios
             Be_Acceso_Datos _BD = new Be_Acceso_Datos();
             _BD.Insertar(sqlInsertar);
         }
+        public void Eliminar(string odontologo)
+        {
+            string sql = "Delete from Odontologos where _Matricula = '" + odontologo + "'";
+            Be_Acceso_Datos _BD = new Be_Acceso_Datos();
+            _BD.EjecutarSelect(sql);
+        }
+        public void Modificar(string odontologo)
+        {
+            string sql = "Update Odontologos set _Nombre = '"+Pp_Nombre+"', _Apellido = '"+Pp_Apellido+"' Where _Matricula = "+odontologo.ToString();
+            Be_Acceso_Datos _BD = new Be_Acceso_Datos();
+            _BD.EjecutarSelect(sql);
+        }
     }   
 }

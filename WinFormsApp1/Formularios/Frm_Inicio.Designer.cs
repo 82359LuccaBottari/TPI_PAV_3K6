@@ -73,6 +73,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(622, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // afiliadoToolStripMenuItem
             // 
@@ -115,14 +116,14 @@
             // aBMReintegroToolStripMenuItem
             // 
             this.aBMReintegroToolStripMenuItem.Name = "aBMReintegroToolStripMenuItem";
-            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.aBMReintegroToolStripMenuItem.Text = "ABM Reintegro";
             this.aBMReintegroToolStripMenuItem.Click += new System.EventHandler(this.aBMReintegroToolStripMenuItem_Click);
             // 
             // consultarReintegroToolStripMenuItem
             // 
             this.consultarReintegroToolStripMenuItem.Name = "consultarReintegroToolStripMenuItem";
-            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.consultarReintegroToolStripMenuItem.Text = "Consultar Reintegro";
             // 
             // odontologosToolStripMenuItem
@@ -162,6 +163,7 @@
             this.atencionesToolStripMenuItem.Name = "atencionesToolStripMenuItem";
             this.atencionesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.atencionesToolStripMenuItem.Text = "Atenciones";
+            this.atencionesToolStripMenuItem.Click += new System.EventHandler(this.atencionesToolStripMenuItem_Click);
             // 
             // aBMAtencionesToolStripMenuItem
             // 
@@ -182,20 +184,20 @@
             this.aBMRevisacionesToolStripMenuItem,
             this.consultarRevisacionesToolStripMenuItem});
             this.revisacionesToolStripMenuItem.Name = "revisacionesToolStripMenuItem";
-            this.revisacionesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.revisacionesToolStripMenuItem.Text = "Revisaciones";
+            this.revisacionesToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.revisacionesToolStripMenuItem.Text = "Expedientes";
             // 
             // aBMRevisacionesToolStripMenuItem
             // 
             this.aBMRevisacionesToolStripMenuItem.Name = "aBMRevisacionesToolStripMenuItem";
-            this.aBMRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.aBMRevisacionesToolStripMenuItem.Text = "ABM Revisaciones";
+            this.aBMRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.aBMRevisacionesToolStripMenuItem.Text = "ABM Expedientes";
             // 
             // consultarRevisacionesToolStripMenuItem
             // 
             this.consultarRevisacionesToolStripMenuItem.Name = "consultarRevisacionesToolStripMenuItem";
-            this.consultarRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.consultarRevisacionesToolStripMenuItem.Text = "Consultar Revisaciones";
+            this.consultarRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.consultarRevisacionesToolStripMenuItem.Text = "Consultar Expedientes";
             // 
             // prestacionesToolStripMenuItem
             // 
@@ -251,7 +253,7 @@
             // estadisticasToolStripMenuItem1
             // 
             this.estadisticasToolStripMenuItem1.Name = "estadisticasToolStripMenuItem1";
-            this.estadisticasToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.estadisticasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.estadisticasToolStripMenuItem1.Text = "Estadisticas";
             // 
             // Frm_Inicio
