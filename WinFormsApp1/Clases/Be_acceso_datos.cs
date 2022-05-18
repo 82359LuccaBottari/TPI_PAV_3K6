@@ -8,7 +8,7 @@ using System.Data;
 
 namespace WinFormsApp1.Clases
 {
-    class Be_Acceso_Datos
+    public class Be_Acceso_Datos
     {
         SqlConnection Conexion = new SqlConnection();
         SqlCommand Cmd = new SqlCommand();
@@ -41,6 +41,27 @@ namespace WinFormsApp1.Clases
             Cmd.CommandText = sqlInsertar;
             Cmd.ExecuteNonQuery();
             Cerrar();
+        }
+        public string Validar(string obj)
+        {
+            string objeto = "";
+            string query = "SELECT _CodPrestacion FROM Prestaciones WHERE _CodPrestacion = @objeto";
+            try
+            {
+                Cmd = new SqlCommand(query, Conexion);
+                Conexion.Open();
+                Cmd.Parameters.AddWithValue("@objeto", obj);
+
+                objeto = Cmd.ExecuteScalar().ToString();
+            }
+            catch(Exception ex)
+            {
+            }
+            finally 
+            {
+                Conexion.Close();
+            }
+            return objeto;
         }
     }
 
