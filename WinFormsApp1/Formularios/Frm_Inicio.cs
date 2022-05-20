@@ -14,45 +14,104 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void aBMOdontologoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aBMAfiliadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ABM_Odontologo ABM_Prestaciones = new Frm_ABM_Odontologo ();
-            ABM_Prestaciones.ShowDialog();
+            Frm_ABM_Afiliados ABMAfiliados = new Frm_ABM_Afiliados();
+            ABMAfiliados.ShowDialog();
         }
 
-        private void aBMPrestacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aBMOdontologoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Odontologo ABMOdontologo = new Frm_ABM_Odontologo();
+            ABMOdontologo.ShowDialog();
+        }
+
+        private void estadisticasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void atencionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Atenciones ABMAtenciones = new Frm_ABM_Atenciones();
+            ABMAtenciones.ShowDialog();
+        }
+
+        private void revisacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prestacionesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Frm_ABM_Prestaciones ABM_Prestaciones = new Frm_ABM_Prestaciones();
             ABM_Prestaciones.ShowDialog();
         }
 
-        private void aBMReintegroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_ABM_Reintegro ABM_Reintegro = new Frm_ABM_Reintegro();
-            ABM_Reintegro.ShowDialog();
-        }
-
-        private void aBMAtencionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_ABM_Atenciones ABM_Atenciones = new Frm_ABM_Atenciones();
-            ABM_Atenciones.ShowDialog();
-        }
-
-        private void aBMAfiliadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_ABM_Afiliados ABM_Afiliados = new Frm_ABM_Afiliados();
-            ABM_Afiliados.ShowDialog();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void atencionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void elementosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ABM_Expedientes ABM_Afiliados = new Frm_ABM_Expedientes();
-            ABM_Afiliados.ShowDialog();
+
+        }
+
+        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expedientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoDeDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expedientePorEstadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Expedientes ABMExpedientes = new Frm_ABM_Expedientes();
+            ABMExpedientes.ShowDialog();
+        }
+
+        private void prestacionesPorElementosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void elementosPorPrestacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void documentosPorPrestacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void odontologoPorTipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void documentosPorExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

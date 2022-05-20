@@ -31,29 +31,29 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.afiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMAfiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarAfiliadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reintegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMReintegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReintegroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odontologosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMOdontologoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMHistorialTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarOdontologoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.atencionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMAtencionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarAtencionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revisacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMRevisacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarRevisacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMPrestacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarVencimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarElementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMTransaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atencionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMsPKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expedientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expedientePorEstadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestacionesPorElementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elementosPorPrestacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentosPorPrestacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odontologoPorTipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentosPorExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,25 +62,21 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.afiliadoToolStripMenuItem,
-            this.reintegroToolStripMenuItem,
             this.odontologosToolStripMenuItem,
-            this.atencionesToolStripMenuItem,
-            this.revisacionesToolStripMenuItem,
-            this.prestacionesToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.aBMTransaccionesToolStripMenuItem,
+            this.aBMsPKToolStripMenuItem,
+            this.listadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(622, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // afiliadoToolStripMenuItem
             // 
             this.afiliadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMAfiliadoToolStripMenuItem,
-            this.aBMToolStripMenuItem,
-            this.consultarAfiliadoToolStripMenuItem});
+            this.aBMAfiliadoToolStripMenuItem});
             this.afiliadoToolStripMenuItem.Name = "afiliadoToolStripMenuItem";
             this.afiliadoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.afiliadoToolStripMenuItem.Text = "Afiliado";
@@ -88,50 +84,14 @@
             // aBMAfiliadoToolStripMenuItem
             // 
             this.aBMAfiliadoToolStripMenuItem.Name = "aBMAfiliadoToolStripMenuItem";
-            this.aBMAfiliadoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.aBMAfiliadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aBMAfiliadoToolStripMenuItem.Text = "ABM Afiliado";
             this.aBMAfiliadoToolStripMenuItem.Click += new System.EventHandler(this.aBMAfiliadoToolStripMenuItem_Click);
-            // 
-            // aBMToolStripMenuItem
-            // 
-            this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
-            this.aBMToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.aBMToolStripMenuItem.Text = "ABM Historial Clinico";
-            // 
-            // consultarAfiliadoToolStripMenuItem
-            // 
-            this.consultarAfiliadoToolStripMenuItem.Name = "consultarAfiliadoToolStripMenuItem";
-            this.consultarAfiliadoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.consultarAfiliadoToolStripMenuItem.Text = "Consultar afiliado";
-            // 
-            // reintegroToolStripMenuItem
-            // 
-            this.reintegroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMReintegroToolStripMenuItem,
-            this.consultarReintegroToolStripMenuItem});
-            this.reintegroToolStripMenuItem.Name = "reintegroToolStripMenuItem";
-            this.reintegroToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.reintegroToolStripMenuItem.Text = "Reintegro";
-            // 
-            // aBMReintegroToolStripMenuItem
-            // 
-            this.aBMReintegroToolStripMenuItem.Name = "aBMReintegroToolStripMenuItem";
-            this.aBMReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.aBMReintegroToolStripMenuItem.Text = "ABM Reintegro";
-            this.aBMReintegroToolStripMenuItem.Click += new System.EventHandler(this.aBMReintegroToolStripMenuItem_Click);
-            // 
-            // consultarReintegroToolStripMenuItem
-            // 
-            this.consultarReintegroToolStripMenuItem.Name = "consultarReintegroToolStripMenuItem";
-            this.consultarReintegroToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.consultarReintegroToolStripMenuItem.Text = "Consultar Reintegro";
             // 
             // odontologosToolStripMenuItem
             // 
             this.odontologosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMOdontologoToolStripMenuItem,
-            this.aBMHistorialTrabajoToolStripMenuItem,
-            this.consultarOdontologoToolStripMenuItem});
+            this.aBMOdontologoToolStripMenuItem});
             this.odontologosToolStripMenuItem.Name = "odontologosToolStripMenuItem";
             this.odontologosToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.odontologosToolStripMenuItem.Text = "Odontologos";
@@ -139,108 +99,9 @@
             // aBMOdontologoToolStripMenuItem
             // 
             this.aBMOdontologoToolStripMenuItem.Name = "aBMOdontologoToolStripMenuItem";
-            this.aBMOdontologoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.aBMOdontologoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aBMOdontologoToolStripMenuItem.Text = "ABM Odontologo";
             this.aBMOdontologoToolStripMenuItem.Click += new System.EventHandler(this.aBMOdontologoToolStripMenuItem_Click);
-            // 
-            // aBMHistorialTrabajoToolStripMenuItem
-            // 
-            this.aBMHistorialTrabajoToolStripMenuItem.Name = "aBMHistorialTrabajoToolStripMenuItem";
-            this.aBMHistorialTrabajoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.aBMHistorialTrabajoToolStripMenuItem.Text = "ABM Historial Trabajo";
-            // 
-            // consultarOdontologoToolStripMenuItem
-            // 
-            this.consultarOdontologoToolStripMenuItem.Name = "consultarOdontologoToolStripMenuItem";
-            this.consultarOdontologoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.consultarOdontologoToolStripMenuItem.Text = "Consultar Odontologo";
-            // 
-            // atencionesToolStripMenuItem
-            // 
-            this.atencionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMAtencionesToolStripMenuItem,
-            this.consultarAtencionesToolStripMenuItem});
-            this.atencionesToolStripMenuItem.Name = "atencionesToolStripMenuItem";
-            this.atencionesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.atencionesToolStripMenuItem.Text = "Atenciones";
-            this.atencionesToolStripMenuItem.Click += new System.EventHandler(this.atencionesToolStripMenuItem_Click);
-            // 
-            // aBMAtencionesToolStripMenuItem
-            // 
-            this.aBMAtencionesToolStripMenuItem.Name = "aBMAtencionesToolStripMenuItem";
-            this.aBMAtencionesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.aBMAtencionesToolStripMenuItem.Text = "ABM Atenciones";
-            this.aBMAtencionesToolStripMenuItem.Click += new System.EventHandler(this.aBMAtencionesToolStripMenuItem_Click);
-            // 
-            // consultarAtencionesToolStripMenuItem
-            // 
-            this.consultarAtencionesToolStripMenuItem.Name = "consultarAtencionesToolStripMenuItem";
-            this.consultarAtencionesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.consultarAtencionesToolStripMenuItem.Text = "Consultar Atenciones";
-            // 
-            // revisacionesToolStripMenuItem
-            // 
-            this.revisacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMRevisacionesToolStripMenuItem,
-            this.consultarRevisacionesToolStripMenuItem});
-            this.revisacionesToolStripMenuItem.Name = "revisacionesToolStripMenuItem";
-            this.revisacionesToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.revisacionesToolStripMenuItem.Text = "Expedientes";
-            // 
-            // aBMRevisacionesToolStripMenuItem
-            // 
-            this.aBMRevisacionesToolStripMenuItem.Name = "aBMRevisacionesToolStripMenuItem";
-            this.aBMRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.aBMRevisacionesToolStripMenuItem.Text = "ABM Expedientes";
-            // 
-            // consultarRevisacionesToolStripMenuItem
-            // 
-            this.consultarRevisacionesToolStripMenuItem.Name = "consultarRevisacionesToolStripMenuItem";
-            this.consultarRevisacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.consultarRevisacionesToolStripMenuItem.Text = "Consultar Expedientes";
-            // 
-            // prestacionesToolStripMenuItem
-            // 
-            this.prestacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMPrestacionesToolStripMenuItem,
-            this.consultarToolStripMenuItem,
-            this.consultarToolStripMenuItem1,
-            this.consultarVencimientoToolStripMenuItem,
-            this.consultarElementoToolStripMenuItem});
-            this.prestacionesToolStripMenuItem.Name = "prestacionesToolStripMenuItem";
-            this.prestacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.prestacionesToolStripMenuItem.Text = "Prestaciones";
-            // 
-            // aBMPrestacionesToolStripMenuItem
-            // 
-            this.aBMPrestacionesToolStripMenuItem.Name = "aBMPrestacionesToolStripMenuItem";
-            this.aBMPrestacionesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.aBMPrestacionesToolStripMenuItem.Text = "ABM Prestaciones";
-            this.aBMPrestacionesToolStripMenuItem.Click += new System.EventHandler(this.aBMPrestacionesToolStripMenuItem_Click);
-            // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar estado";
-            // 
-            // consultarToolStripMenuItem1
-            // 
-            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
-            this.consultarToolStripMenuItem1.Text = "Consultar garantia";
-            // 
-            // consultarVencimientoToolStripMenuItem
-            // 
-            this.consultarVencimientoToolStripMenuItem.Name = "consultarVencimientoToolStripMenuItem";
-            this.consultarVencimientoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.consultarVencimientoToolStripMenuItem.Text = "Consultar vencimiento";
-            // 
-            // consultarElementoToolStripMenuItem
-            // 
-            this.consultarElementoToolStripMenuItem.Name = "consultarElementoToolStripMenuItem";
-            this.consultarElementoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.consultarElementoToolStripMenuItem.Text = "Consultar elemento";
             // 
             // reportesToolStripMenuItem
             // 
@@ -255,6 +116,156 @@
             this.estadisticasToolStripMenuItem1.Name = "estadisticasToolStripMenuItem1";
             this.estadisticasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.estadisticasToolStripMenuItem1.Text = "Estadisticas";
+            this.estadisticasToolStripMenuItem1.Click += new System.EventHandler(this.estadisticasToolStripMenuItem1_Click);
+            // 
+            // aBMTransaccionesToolStripMenuItem
+            // 
+            this.aBMTransaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.atencionesToolStripMenuItem1,
+            this.revisacionesToolStripMenuItem1});
+            this.aBMTransaccionesToolStripMenuItem.Name = "aBMTransaccionesToolStripMenuItem";
+            this.aBMTransaccionesToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.aBMTransaccionesToolStripMenuItem.Text = "ABM Transacciones";
+            // 
+            // atencionesToolStripMenuItem1
+            // 
+            this.atencionesToolStripMenuItem1.Name = "atencionesToolStripMenuItem1";
+            this.atencionesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.atencionesToolStripMenuItem1.Text = "Atenciones";
+            this.atencionesToolStripMenuItem1.Click += new System.EventHandler(this.atencionesToolStripMenuItem1_Click);
+            // 
+            // revisacionesToolStripMenuItem1
+            // 
+            this.revisacionesToolStripMenuItem1.Name = "revisacionesToolStripMenuItem1";
+            this.revisacionesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.revisacionesToolStripMenuItem1.Text = "Revisaciones";
+            this.revisacionesToolStripMenuItem1.Click += new System.EventHandler(this.revisacionesToolStripMenuItem1_Click);
+            // 
+            // aBMsPKToolStripMenuItem
+            // 
+            this.aBMsPKToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prestacionesToolStripMenuItem1,
+            this.categoriasToolStripMenuItem,
+            this.elementosToolStripMenuItem,
+            this.documentosToolStripMenuItem,
+            this.expedientesToolStripMenuItem,
+            this.tipoDeDocumentosToolStripMenuItem,
+            this.estadosToolStripMenuItem,
+            this.funcionesToolStripMenuItem});
+            this.aBMsPKToolStripMenuItem.Name = "aBMsPKToolStripMenuItem";
+            this.aBMsPKToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.aBMsPKToolStripMenuItem.Text = "ABMs PK";
+            // 
+            // prestacionesToolStripMenuItem1
+            // 
+            this.prestacionesToolStripMenuItem1.Name = "prestacionesToolStripMenuItem1";
+            this.prestacionesToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.prestacionesToolStripMenuItem1.Text = "Prestaciones";
+            this.prestacionesToolStripMenuItem1.Click += new System.EventHandler(this.prestacionesToolStripMenuItem1_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // elementosToolStripMenuItem
+            // 
+            this.elementosToolStripMenuItem.Name = "elementosToolStripMenuItem";
+            this.elementosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.elementosToolStripMenuItem.Text = "Elementos";
+            this.elementosToolStripMenuItem.Click += new System.EventHandler(this.elementosToolStripMenuItem_Click);
+            // 
+            // documentosToolStripMenuItem
+            // 
+            this.documentosToolStripMenuItem.Name = "documentosToolStripMenuItem";
+            this.documentosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.documentosToolStripMenuItem.Text = "Documentos";
+            this.documentosToolStripMenuItem.Click += new System.EventHandler(this.documentosToolStripMenuItem_Click);
+            // 
+            // expedientesToolStripMenuItem
+            // 
+            this.expedientesToolStripMenuItem.Name = "expedientesToolStripMenuItem";
+            this.expedientesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.expedientesToolStripMenuItem.Text = "Expedientes";
+            this.expedientesToolStripMenuItem.Click += new System.EventHandler(this.expedientesToolStripMenuItem_Click);
+            // 
+            // tipoDeDocumentosToolStripMenuItem
+            // 
+            this.tipoDeDocumentosToolStripMenuItem.Name = "tipoDeDocumentosToolStripMenuItem";
+            this.tipoDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.tipoDeDocumentosToolStripMenuItem.Text = "Tipo de Documentos";
+            this.tipoDeDocumentosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeDocumentosToolStripMenuItem_Click);
+            // 
+            // estadosToolStripMenuItem
+            // 
+            this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.estadosToolStripMenuItem.Text = "Estados";
+            this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
+            // 
+            // funcionesToolStripMenuItem
+            // 
+            this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
+            this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.funcionesToolStripMenuItem.Text = "Funciones";
+            this.funcionesToolStripMenuItem.Click += new System.EventHandler(this.funcionesToolStripMenuItem_Click);
+            // 
+            // listadosToolStripMenuItem
+            // 
+            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.expedientePorEstadoToolStripMenuItem,
+            this.prestacionesPorElementosToolStripMenuItem,
+            this.elementosPorPrestacionesToolStripMenuItem,
+            this.documentosPorPrestacionesToolStripMenuItem,
+            this.odontologoPorTipoToolStripMenuItem,
+            this.documentosPorExpedienteToolStripMenuItem});
+            this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
+            this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.listadosToolStripMenuItem.Text = "Listados";
+            // 
+            // expedientePorEstadoToolStripMenuItem
+            // 
+            this.expedientePorEstadoToolStripMenuItem.Name = "expedientePorEstadoToolStripMenuItem";
+            this.expedientePorEstadoToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.expedientePorEstadoToolStripMenuItem.Text = "Expediente por estado";
+            this.expedientePorEstadoToolStripMenuItem.Click += new System.EventHandler(this.expedientePorEstadoToolStripMenuItem_Click);
+            // 
+            // prestacionesPorElementosToolStripMenuItem
+            // 
+            this.prestacionesPorElementosToolStripMenuItem.Name = "prestacionesPorElementosToolStripMenuItem";
+            this.prestacionesPorElementosToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.prestacionesPorElementosToolStripMenuItem.Text = "Prestaciones por elementos";
+            this.prestacionesPorElementosToolStripMenuItem.Click += new System.EventHandler(this.prestacionesPorElementosToolStripMenuItem_Click);
+            // 
+            // elementosPorPrestacionesToolStripMenuItem
+            // 
+            this.elementosPorPrestacionesToolStripMenuItem.Name = "elementosPorPrestacionesToolStripMenuItem";
+            this.elementosPorPrestacionesToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.elementosPorPrestacionesToolStripMenuItem.Text = "Elementos por prestaciones";
+            this.elementosPorPrestacionesToolStripMenuItem.Click += new System.EventHandler(this.elementosPorPrestacionesToolStripMenuItem_Click);
+            // 
+            // documentosPorPrestacionesToolStripMenuItem
+            // 
+            this.documentosPorPrestacionesToolStripMenuItem.Name = "documentosPorPrestacionesToolStripMenuItem";
+            this.documentosPorPrestacionesToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.documentosPorPrestacionesToolStripMenuItem.Text = "Documentos por prestaciones";
+            this.documentosPorPrestacionesToolStripMenuItem.Click += new System.EventHandler(this.documentosPorPrestacionesToolStripMenuItem_Click);
+            // 
+            // odontologoPorTipoToolStripMenuItem
+            // 
+            this.odontologoPorTipoToolStripMenuItem.Name = "odontologoPorTipoToolStripMenuItem";
+            this.odontologoPorTipoToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.odontologoPorTipoToolStripMenuItem.Text = "Odontologo por tipo";
+            this.odontologoPorTipoToolStripMenuItem.Click += new System.EventHandler(this.odontologoPorTipoToolStripMenuItem_Click);
+            // 
+            // documentosPorExpedienteToolStripMenuItem
+            // 
+            this.documentosPorExpedienteToolStripMenuItem.Name = "documentosPorExpedienteToolStripMenuItem";
+            this.documentosPorExpedienteToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.documentosPorExpedienteToolStripMenuItem.Text = "Documentos por expediente";
+            this.documentosPorExpedienteToolStripMenuItem.Click += new System.EventHandler(this.documentosPorExpedienteToolStripMenuItem_Click);
             // 
             // Frm_Inicio
             // 
@@ -280,28 +291,28 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem afiliadoToolStripMenuItem;
         private ToolStripMenuItem aBMAfiliadoToolStripMenuItem;
-        private ToolStripMenuItem aBMToolStripMenuItem;
-        private ToolStripMenuItem consultarAfiliadoToolStripMenuItem;
-        private ToolStripMenuItem reintegroToolStripMenuItem;
-        private ToolStripMenuItem aBMReintegroToolStripMenuItem;
-        private ToolStripMenuItem consultarReintegroToolStripMenuItem;
         private ToolStripMenuItem odontologosToolStripMenuItem;
         private ToolStripMenuItem aBMOdontologoToolStripMenuItem;
-        private ToolStripMenuItem aBMHistorialTrabajoToolStripMenuItem;
-        private ToolStripMenuItem consultarOdontologoToolStripMenuItem;
-        private ToolStripMenuItem atencionesToolStripMenuItem;
-        private ToolStripMenuItem consultarAtencionesToolStripMenuItem;
-        private ToolStripMenuItem revisacionesToolStripMenuItem;
-        private ToolStripMenuItem aBMRevisacionesToolStripMenuItem;
-        private ToolStripMenuItem consultarRevisacionesToolStripMenuItem;
-        private ToolStripMenuItem prestacionesToolStripMenuItem;
-        private ToolStripMenuItem aBMPrestacionesToolStripMenuItem;
-        private ToolStripMenuItem consultarToolStripMenuItem;
-        private ToolStripMenuItem consultarToolStripMenuItem1;
-        private ToolStripMenuItem consultarVencimientoToolStripMenuItem;
-        private ToolStripMenuItem consultarElementoToolStripMenuItem;
         private ToolStripMenuItem reportesToolStripMenuItem;
         private ToolStripMenuItem estadisticasToolStripMenuItem1;
-        private ToolStripMenuItem aBMAtencionesToolStripMenuItem;
+        private ToolStripMenuItem aBMTransaccionesToolStripMenuItem;
+        private ToolStripMenuItem atencionesToolStripMenuItem1;
+        private ToolStripMenuItem revisacionesToolStripMenuItem1;
+        private ToolStripMenuItem aBMsPKToolStripMenuItem;
+        private ToolStripMenuItem prestacionesToolStripMenuItem1;
+        private ToolStripMenuItem categoriasToolStripMenuItem;
+        private ToolStripMenuItem elementosToolStripMenuItem;
+        private ToolStripMenuItem documentosToolStripMenuItem;
+        private ToolStripMenuItem expedientesToolStripMenuItem;
+        private ToolStripMenuItem tipoDeDocumentosToolStripMenuItem;
+        private ToolStripMenuItem estadosToolStripMenuItem;
+        private ToolStripMenuItem funcionesToolStripMenuItem;
+        private ToolStripMenuItem listadosToolStripMenuItem;
+        private ToolStripMenuItem expedientePorEstadoToolStripMenuItem;
+        private ToolStripMenuItem prestacionesPorElementosToolStripMenuItem;
+        private ToolStripMenuItem elementosPorPrestacionesToolStripMenuItem;
+        private ToolStripMenuItem documentosPorPrestacionesToolStripMenuItem;
+        private ToolStripMenuItem odontologoPorTipoToolStripMenuItem;
+        private ToolStripMenuItem documentosPorExpedienteToolStripMenuItem;
     }
 }
