@@ -35,13 +35,26 @@
             this.btn_consultar = new System.Windows.Forms.Button();
             this.mkt_numeroAfiliado = new System.Windows.Forms.MaskedTextBox();
             this.mkt_codigoCategoria = new System.Windows.Forms.MaskedTextBox();
-            this.mkt_CodigoPrestacion = new System.Windows.Forms.MaskedTextBox();
-            this.mkt_numeroElemento = new System.Windows.Forms.MaskedTextBox();
             this.mkt_fechaAtencion = new System.Windows.Forms.MaskedTextBox();
-            this.mkt_codigoDocumento = new System.Windows.Forms.MaskedTextBox();
-            this.mkt_matricula = new System.Windows.Forms.MaskedTextBox();
-            this.mkt_numeroExpediente = new System.Windows.Forms.MaskedTextBox();
             this.grid_Atenciones = new System.Windows.Forms.DataGridView();
+            this.cb_codigoPrestacion = new WinFormsApp1.Clases.ComboBox01();
+            this.cb_numeroElemento = new WinFormsApp1.Clases.ComboBox01();
+            this.cb_codigoTipo = new WinFormsApp1.Clases.ComboBox01();
+            this.cb_matricula = new WinFormsApp1.Clases.ComboBox01();
+            this.cb_numeroExped = new WinFormsApp1.Clases.ComboBox01();
+            this.mkt_id = new System.Windows.Forms.MaskedTextBox();
+            this.rb_nroAfiliado = new System.Windows.Forms.RadioButton();
+            this.rb_codigoCategoria = new System.Windows.Forms.RadioButton();
+            this.rb_codigoPrestacion = new System.Windows.Forms.RadioButton();
+            this.rb_nroElemento = new System.Windows.Forms.RadioButton();
+            this.rb_fechaAtención = new System.Windows.Forms.RadioButton();
+            this.rb_matricula = new System.Windows.Forms.RadioButton();
+            this.rb_codigoDocumento = new System.Windows.Forms.RadioButton();
+            this.rb_numeroExpediente = new System.Windows.Forms.RadioButton();
+            this.cb_id = new System.Windows.Forms.RadioButton();
+            this.rb_todos = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroAfiliado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoPrestacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,14 +63,6 @@
             this.CodigoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rb_nroAfiliado = new System.Windows.Forms.RadioButton();
-            this.rb_codigoPrestacion = new System.Windows.Forms.RadioButton();
-            this.rb_codigoCategoria = new System.Windows.Forms.RadioButton();
-            this.rb_fechaAtención = new System.Windows.Forms.RadioButton();
-            this.rb_nroElemento = new System.Windows.Forms.RadioButton();
-            this.rb_codigoDocumento = new System.Windows.Forms.RadioButton();
-            this.rb_matricula = new System.Windows.Forms.RadioButton();
-            this.rb_numeroExpediente = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Atenciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +85,7 @@
             this.btn_agregar.Size = new System.Drawing.Size(75, 50);
             this.btn_agregar.TabIndex = 1;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_eliminar
             // 
@@ -90,6 +96,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(75, 50);
             this.btn_eliminar.TabIndex = 3;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -100,11 +107,12 @@
             this.btn_modificar.Size = new System.Drawing.Size(75, 50);
             this.btn_modificar.TabIndex = 4;
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_consultar
             // 
             this.btn_consultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_consultar.Location = new System.Drawing.Point(553, 260);
+            this.btn_consultar.Location = new System.Drawing.Point(553, 600);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(109, 37);
             this.btn_consultar.TabIndex = 5;
@@ -117,7 +125,7 @@
             this.mkt_numeroAfiliado.Location = new System.Drawing.Point(174, 72);
             this.mkt_numeroAfiliado.Mask = "99999";
             this.mkt_numeroAfiliado.Name = "mkt_numeroAfiliado";
-            this.mkt_numeroAfiliado.Size = new System.Drawing.Size(100, 23);
+            this.mkt_numeroAfiliado.Size = new System.Drawing.Size(121, 23);
             this.mkt_numeroAfiliado.TabIndex = 6;
             this.mkt_numeroAfiliado.ValidatingType = typeof(int);
             // 
@@ -126,63 +134,18 @@
             this.mkt_codigoCategoria.Location = new System.Drawing.Point(174, 115);
             this.mkt_codigoCategoria.Mask = "99999";
             this.mkt_codigoCategoria.Name = "mkt_codigoCategoria";
-            this.mkt_codigoCategoria.Size = new System.Drawing.Size(100, 23);
+            this.mkt_codigoCategoria.Size = new System.Drawing.Size(121, 23);
             this.mkt_codigoCategoria.TabIndex = 7;
             this.mkt_codigoCategoria.ValidatingType = typeof(int);
-            // 
-            // mkt_CodigoPrestacion
-            // 
-            this.mkt_CodigoPrestacion.Location = new System.Drawing.Point(174, 159);
-            this.mkt_CodigoPrestacion.Mask = "99999";
-            this.mkt_CodigoPrestacion.Name = "mkt_CodigoPrestacion";
-            this.mkt_CodigoPrestacion.Size = new System.Drawing.Size(100, 23);
-            this.mkt_CodigoPrestacion.TabIndex = 12;
-            this.mkt_CodigoPrestacion.ValidatingType = typeof(int);
-            // 
-            // mkt_numeroElemento
-            // 
-            this.mkt_numeroElemento.Location = new System.Drawing.Point(553, 72);
-            this.mkt_numeroElemento.Mask = "99999";
-            this.mkt_numeroElemento.Name = "mkt_numeroElemento";
-            this.mkt_numeroElemento.Size = new System.Drawing.Size(100, 23);
-            this.mkt_numeroElemento.TabIndex = 13;
-            this.mkt_numeroElemento.ValidatingType = typeof(int);
             // 
             // mkt_fechaAtencion
             // 
             this.mkt_fechaAtencion.Location = new System.Drawing.Point(174, 207);
             this.mkt_fechaAtencion.Mask = "00/00/0000";
             this.mkt_fechaAtencion.Name = "mkt_fechaAtencion";
-            this.mkt_fechaAtencion.Size = new System.Drawing.Size(100, 23);
+            this.mkt_fechaAtencion.Size = new System.Drawing.Size(121, 23);
             this.mkt_fechaAtencion.TabIndex = 17;
             this.mkt_fechaAtencion.ValidatingType = typeof(System.DateTime);
-            // 
-            // mkt_codigoDocumento
-            // 
-            this.mkt_codigoDocumento.Location = new System.Drawing.Point(553, 115);
-            this.mkt_codigoDocumento.Mask = "99999";
-            this.mkt_codigoDocumento.Name = "mkt_codigoDocumento";
-            this.mkt_codigoDocumento.Size = new System.Drawing.Size(100, 23);
-            this.mkt_codigoDocumento.TabIndex = 18;
-            this.mkt_codigoDocumento.ValidatingType = typeof(int);
-            // 
-            // mkt_matricula
-            // 
-            this.mkt_matricula.Location = new System.Drawing.Point(553, 159);
-            this.mkt_matricula.Mask = "99999";
-            this.mkt_matricula.Name = "mkt_matricula";
-            this.mkt_matricula.Size = new System.Drawing.Size(100, 23);
-            this.mkt_matricula.TabIndex = 19;
-            this.mkt_matricula.ValidatingType = typeof(int);
-            // 
-            // mkt_numeroExpediente
-            // 
-            this.mkt_numeroExpediente.Location = new System.Drawing.Point(553, 207);
-            this.mkt_numeroExpediente.Mask = "99999";
-            this.mkt_numeroExpediente.Name = "mkt_numeroExpediente";
-            this.mkt_numeroExpediente.Size = new System.Drawing.Size(100, 23);
-            this.mkt_numeroExpediente.TabIndex = 20;
-            this.mkt_numeroExpediente.ValidatingType = typeof(int);
             // 
             // grid_Atenciones
             // 
@@ -190,6 +153,7 @@
             this.grid_Atenciones.AllowUserToDeleteRows = false;
             this.grid_Atenciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_Atenciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._id,
             this.NroAfiliado,
             this.CodigoCategoria,
             this.CodigoPrestacion,
@@ -198,12 +162,203 @@
             this.CodigoDocumento,
             this.Matricula,
             this.NumeroExpediente});
-            this.grid_Atenciones.Location = new System.Drawing.Point(12, 317);
+            this.grid_Atenciones.Location = new System.Drawing.Point(12, 305);
             this.grid_Atenciones.Name = "grid_Atenciones";
             this.grid_Atenciones.ReadOnly = true;
             this.grid_Atenciones.RowTemplate.Height = 25;
             this.grid_Atenciones.Size = new System.Drawing.Size(650, 264);
             this.grid_Atenciones.TabIndex = 21;
+            // 
+            // cb_codigoPrestacion
+            // 
+            this.cb_codigoPrestacion.FormattingEnabled = true;
+            this.cb_codigoPrestacion.Location = new System.Drawing.Point(174, 162);
+            this.cb_codigoPrestacion.Name = "cb_codigoPrestacion";
+            this.cb_codigoPrestacion.Pp_descripcion = "_Descripcion";
+            this.cb_codigoPrestacion.Pp_Pk = "_CodPrestacion";
+            this.cb_codigoPrestacion.Pp_tabla = "Prestaciones";
+            this.cb_codigoPrestacion.Size = new System.Drawing.Size(121, 23);
+            this.cb_codigoPrestacion.TabIndex = 38;
+            // 
+            // cb_numeroElemento
+            // 
+            this.cb_numeroElemento.FormattingEnabled = true;
+            this.cb_numeroElemento.Location = new System.Drawing.Point(535, 68);
+            this.cb_numeroElemento.Name = "cb_numeroElemento";
+            this.cb_numeroElemento.Pp_descripcion = "Nombre";
+            this.cb_numeroElemento.Pp_Pk = "NroElemento";
+            this.cb_numeroElemento.Pp_tabla = "Elementos";
+            this.cb_numeroElemento.Size = new System.Drawing.Size(118, 23);
+            this.cb_numeroElemento.TabIndex = 39;
+            // 
+            // cb_codigoTipo
+            // 
+            this.cb_codigoTipo.FormattingEnabled = true;
+            this.cb_codigoTipo.Location = new System.Drawing.Point(535, 113);
+            this.cb_codigoTipo.Name = "cb_codigoTipo";
+            this.cb_codigoTipo.Pp_descripcion = "Descripcion";
+            this.cb_codigoTipo.Pp_Pk = "CodTipo";
+            this.cb_codigoTipo.Pp_tabla = "TipoDocumentos";
+            this.cb_codigoTipo.Size = new System.Drawing.Size(118, 23);
+            this.cb_codigoTipo.TabIndex = 40;
+            // 
+            // cb_matricula
+            // 
+            this.cb_matricula.FormattingEnabled = true;
+            this.cb_matricula.Location = new System.Drawing.Point(535, 160);
+            this.cb_matricula.Name = "cb_matricula";
+            this.cb_matricula.Pp_descripcion = "Nombre, Apellido";
+            this.cb_matricula.Pp_Pk = "Matricula";
+            this.cb_matricula.Pp_tabla = "Odontologos";
+            this.cb_matricula.Size = new System.Drawing.Size(118, 23);
+            this.cb_matricula.TabIndex = 41;
+            // 
+            // cb_numeroExped
+            // 
+            this.cb_numeroExped.FormattingEnabled = true;
+            this.cb_numeroExped.Location = new System.Drawing.Point(535, 207);
+            this.cb_numeroExped.Name = "cb_numeroExped";
+            this.cb_numeroExped.Pp_descripcion = "FechaInicio";
+            this.cb_numeroExped.Pp_Pk = "NroExpe";
+            this.cb_numeroExped.Pp_tabla = "Expedientes";
+            this.cb_numeroExped.Size = new System.Drawing.Size(118, 23);
+            this.cb_numeroExped.TabIndex = 42;
+            // 
+            // mkt_id
+            // 
+            this.mkt_id.Location = new System.Drawing.Point(174, 247);
+            this.mkt_id.Mask = "99999";
+            this.mkt_id.Name = "mkt_id";
+            this.mkt_id.Size = new System.Drawing.Size(35, 23);
+            this.mkt_id.TabIndex = 44;
+            this.mkt_id.ValidatingType = typeof(int);
+            // 
+            // rb_nroAfiliado
+            // 
+            this.rb_nroAfiliado.AutoSize = true;
+            this.rb_nroAfiliado.Location = new System.Drawing.Point(12, 69);
+            this.rb_nroAfiliado.Name = "rb_nroAfiliado";
+            this.rb_nroAfiliado.Size = new System.Drawing.Size(113, 19);
+            this.rb_nroAfiliado.TabIndex = 45;
+            this.rb_nroAfiliado.TabStop = true;
+            this.rb_nroAfiliado.Text = "Numero Afiliado";
+            this.rb_nroAfiliado.UseVisualStyleBackColor = true;
+            // 
+            // rb_codigoCategoria
+            // 
+            this.rb_codigoCategoria.AutoSize = true;
+            this.rb_codigoCategoria.Location = new System.Drawing.Point(12, 119);
+            this.rb_codigoCategoria.Name = "rb_codigoCategoria";
+            this.rb_codigoCategoria.Size = new System.Drawing.Size(134, 19);
+            this.rb_codigoCategoria.TabIndex = 46;
+            this.rb_codigoCategoria.TabStop = true;
+            this.rb_codigoCategoria.Text = "Codigo de Categoria";
+            this.rb_codigoCategoria.UseVisualStyleBackColor = true;
+            // 
+            // rb_codigoPrestacion
+            // 
+            this.rb_codigoPrestacion.AutoSize = true;
+            this.rb_codigoPrestacion.Location = new System.Drawing.Point(12, 166);
+            this.rb_codigoPrestacion.Name = "rb_codigoPrestacion";
+            this.rb_codigoPrestacion.Size = new System.Drawing.Size(138, 19);
+            this.rb_codigoPrestacion.TabIndex = 47;
+            this.rb_codigoPrestacion.TabStop = true;
+            this.rb_codigoPrestacion.Text = "Codigo de Prestacion";
+            this.rb_codigoPrestacion.UseVisualStyleBackColor = true;
+            // 
+            // rb_nroElemento
+            // 
+            this.rb_nroElemento.AutoSize = true;
+            this.rb_nroElemento.Location = new System.Drawing.Point(357, 72);
+            this.rb_nroElemento.Name = "rb_nroElemento";
+            this.rb_nroElemento.Size = new System.Drawing.Size(138, 19);
+            this.rb_nroElemento.TabIndex = 48;
+            this.rb_nroElemento.TabStop = true;
+            this.rb_nroElemento.Text = "Numero de Elemento";
+            this.rb_nroElemento.UseVisualStyleBackColor = true;
+            // 
+            // rb_fechaAtención
+            // 
+            this.rb_fechaAtención.AutoSize = true;
+            this.rb_fechaAtención.Location = new System.Drawing.Point(12, 211);
+            this.rb_fechaAtención.Name = "rb_fechaAtención";
+            this.rb_fechaAtención.Size = new System.Drawing.Size(123, 19);
+            this.rb_fechaAtención.TabIndex = 49;
+            this.rb_fechaAtención.TabStop = true;
+            this.rb_fechaAtención.Text = "Fecha de Atencion";
+            this.rb_fechaAtención.UseVisualStyleBackColor = true;
+            // 
+            // rb_matricula
+            // 
+            this.rb_matricula.AutoSize = true;
+            this.rb_matricula.Location = new System.Drawing.Point(357, 166);
+            this.rb_matricula.Name = "rb_matricula";
+            this.rb_matricula.Size = new System.Drawing.Size(75, 19);
+            this.rb_matricula.TabIndex = 50;
+            this.rb_matricula.TabStop = true;
+            this.rb_matricula.Text = "Matricula";
+            this.rb_matricula.UseVisualStyleBackColor = true;
+            // 
+            // rb_codigoDocumento
+            // 
+            this.rb_codigoDocumento.AutoSize = true;
+            this.rb_codigoDocumento.Location = new System.Drawing.Point(357, 119);
+            this.rb_codigoDocumento.Name = "rb_codigoDocumento";
+            this.rb_codigoDocumento.Size = new System.Drawing.Size(146, 19);
+            this.rb_codigoDocumento.TabIndex = 51;
+            this.rb_codigoDocumento.TabStop = true;
+            this.rb_codigoDocumento.Text = "Codigo de Documento";
+            this.rb_codigoDocumento.UseVisualStyleBackColor = true;
+            // 
+            // rb_numeroExpediente
+            // 
+            this.rb_numeroExpediente.AutoSize = true;
+            this.rb_numeroExpediente.Location = new System.Drawing.Point(357, 211);
+            this.rb_numeroExpediente.Name = "rb_numeroExpediente";
+            this.rb_numeroExpediente.Size = new System.Drawing.Size(146, 19);
+            this.rb_numeroExpediente.TabIndex = 52;
+            this.rb_numeroExpediente.TabStop = true;
+            this.rb_numeroExpediente.Text = "Numero de Expediente";
+            this.rb_numeroExpediente.UseVisualStyleBackColor = true;
+            // 
+            // cb_id
+            // 
+            this.cb_id.AutoSize = true;
+            this.cb_id.Location = new System.Drawing.Point(12, 251);
+            this.cb_id.Name = "cb_id";
+            this.cb_id.Size = new System.Drawing.Size(35, 19);
+            this.cb_id.TabIndex = 53;
+            this.cb_id.TabStop = true;
+            this.cb_id.Text = "Id";
+            this.cb_id.UseVisualStyleBackColor = true;
+            // 
+            // rb_todos
+            // 
+            this.rb_todos.AutoSize = true;
+            this.rb_todos.Location = new System.Drawing.Point(357, 251);
+            this.rb_todos.Name = "rb_todos";
+            this.rb_todos.Size = new System.Drawing.Size(62, 19);
+            this.rb_todos.TabIndex = 54;
+            this.rb_todos.TabStop = true;
+            this.rb_todos.Text = "TODOS";
+            this.rb_todos.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(580, 247);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 37);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // _id
+            // 
+            this._id.HeaderText = "Id";
+            this._id.Name = "_id";
+            this._id.ReadOnly = true;
             // 
             // NroAfiliado
             // 
@@ -253,114 +408,30 @@
             this.NumeroExpediente.Name = "NumeroExpediente";
             this.NumeroExpediente.ReadOnly = true;
             // 
-            // rb_nroAfiliado
-            // 
-            this.rb_nroAfiliado.AutoSize = true;
-            this.rb_nroAfiliado.Location = new System.Drawing.Point(12, 76);
-            this.rb_nroAfiliado.Name = "rb_nroAfiliado";
-            this.rb_nroAfiliado.Size = new System.Drawing.Size(113, 19);
-            this.rb_nroAfiliado.TabIndex = 22;
-            this.rb_nroAfiliado.TabStop = true;
-            this.rb_nroAfiliado.Text = "Numero Afiliado";
-            this.rb_nroAfiliado.UseVisualStyleBackColor = true;
-            // 
-            // rb_codigoPrestacion
-            // 
-            this.rb_codigoPrestacion.AutoSize = true;
-            this.rb_codigoPrestacion.Location = new System.Drawing.Point(12, 162);
-            this.rb_codigoPrestacion.Name = "rb_codigoPrestacion";
-            this.rb_codigoPrestacion.Size = new System.Drawing.Size(138, 19);
-            this.rb_codigoPrestacion.TabIndex = 23;
-            this.rb_codigoPrestacion.TabStop = true;
-            this.rb_codigoPrestacion.Text = "Codigo de Prestación";
-            this.rb_codigoPrestacion.UseVisualStyleBackColor = true;
-            // 
-            // rb_codigoCategoria
-            // 
-            this.rb_codigoCategoria.AutoSize = true;
-            this.rb_codigoCategoria.Location = new System.Drawing.Point(12, 119);
-            this.rb_codigoCategoria.Name = "rb_codigoCategoria";
-            this.rb_codigoCategoria.Size = new System.Drawing.Size(134, 19);
-            this.rb_codigoCategoria.TabIndex = 24;
-            this.rb_codigoCategoria.TabStop = true;
-            this.rb_codigoCategoria.Text = "Codigo de Categoría";
-            this.rb_codigoCategoria.UseVisualStyleBackColor = true;
-            // 
-            // rb_fechaAtención
-            // 
-            this.rb_fechaAtención.AutoSize = true;
-            this.rb_fechaAtención.Location = new System.Drawing.Point(12, 211);
-            this.rb_fechaAtención.Name = "rb_fechaAtención";
-            this.rb_fechaAtención.Size = new System.Drawing.Size(123, 19);
-            this.rb_fechaAtención.TabIndex = 25;
-            this.rb_fechaAtención.TabStop = true;
-            this.rb_fechaAtención.Text = "Fecha de Atención";
-            this.rb_fechaAtención.UseVisualStyleBackColor = true;
-            // 
-            // rb_nroElemento
-            // 
-            this.rb_nroElemento.AutoSize = true;
-            this.rb_nroElemento.Location = new System.Drawing.Point(376, 73);
-            this.rb_nroElemento.Name = "rb_nroElemento";
-            this.rb_nroElemento.Size = new System.Drawing.Size(138, 19);
-            this.rb_nroElemento.TabIndex = 26;
-            this.rb_nroElemento.TabStop = true;
-            this.rb_nroElemento.Text = "Numero de Elemento";
-            this.rb_nroElemento.UseVisualStyleBackColor = true;
-            // 
-            // rb_codigoDocumento
-            // 
-            this.rb_codigoDocumento.AutoSize = true;
-            this.rb_codigoDocumento.Location = new System.Drawing.Point(376, 119);
-            this.rb_codigoDocumento.Name = "rb_codigoDocumento";
-            this.rb_codigoDocumento.Size = new System.Drawing.Size(146, 19);
-            this.rb_codigoDocumento.TabIndex = 27;
-            this.rb_codigoDocumento.TabStop = true;
-            this.rb_codigoDocumento.Text = "Codigo de Documento";
-            this.rb_codigoDocumento.UseVisualStyleBackColor = true;
-            // 
-            // rb_matricula
-            // 
-            this.rb_matricula.AutoSize = true;
-            this.rb_matricula.Location = new System.Drawing.Point(376, 163);
-            this.rb_matricula.Name = "rb_matricula";
-            this.rb_matricula.Size = new System.Drawing.Size(75, 19);
-            this.rb_matricula.TabIndex = 28;
-            this.rb_matricula.TabStop = true;
-            this.rb_matricula.Text = "Matricula";
-            this.rb_matricula.UseVisualStyleBackColor = true;
-            // 
-            // rb_numeroExpediente
-            // 
-            this.rb_numeroExpediente.AutoSize = true;
-            this.rb_numeroExpediente.Location = new System.Drawing.Point(376, 211);
-            this.rb_numeroExpediente.Name = "rb_numeroExpediente";
-            this.rb_numeroExpediente.Size = new System.Drawing.Size(146, 19);
-            this.rb_numeroExpediente.TabIndex = 29;
-            this.rb_numeroExpediente.TabStop = true;
-            this.rb_numeroExpediente.Text = "Numero de Expediente";
-            this.rb_numeroExpediente.UseVisualStyleBackColor = true;
-            // 
             // Frm_ABM_Atenciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 649);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rb_todos);
+            this.Controls.Add(this.cb_id);
             this.Controls.Add(this.rb_numeroExpediente);
-            this.Controls.Add(this.rb_matricula);
             this.Controls.Add(this.rb_codigoDocumento);
-            this.Controls.Add(this.rb_nroElemento);
+            this.Controls.Add(this.rb_matricula);
             this.Controls.Add(this.rb_fechaAtención);
-            this.Controls.Add(this.rb_codigoCategoria);
+            this.Controls.Add(this.rb_nroElemento);
             this.Controls.Add(this.rb_codigoPrestacion);
+            this.Controls.Add(this.rb_codigoCategoria);
             this.Controls.Add(this.rb_nroAfiliado);
+            this.Controls.Add(this.mkt_id);
+            this.Controls.Add(this.cb_numeroExped);
+            this.Controls.Add(this.cb_matricula);
+            this.Controls.Add(this.cb_codigoTipo);
+            this.Controls.Add(this.cb_numeroElemento);
+            this.Controls.Add(this.cb_codigoPrestacion);
             this.Controls.Add(this.grid_Atenciones);
-            this.Controls.Add(this.mkt_numeroExpediente);
-            this.Controls.Add(this.mkt_matricula);
-            this.Controls.Add(this.mkt_codigoDocumento);
             this.Controls.Add(this.mkt_fechaAtencion);
-            this.Controls.Add(this.mkt_numeroElemento);
-            this.Controls.Add(this.mkt_CodigoPrestacion);
             this.Controls.Add(this.mkt_codigoCategoria);
             this.Controls.Add(this.mkt_numeroAfiliado);
             this.Controls.Add(this.btn_consultar);
@@ -387,13 +458,26 @@
         private Button btn_consultar;
         private MaskedTextBox mkt_numeroAfiliado;
         private MaskedTextBox mkt_codigoCategoria;
-        private MaskedTextBox mkt_CodigoPrestacion;
-        private MaskedTextBox mkt_numeroElemento;
         private MaskedTextBox mkt_fechaAtencion;
-        private MaskedTextBox mkt_codigoDocumento;
-        private MaskedTextBox mkt_matricula;
-        private MaskedTextBox mkt_numeroExpediente;
         private DataGridView grid_Atenciones;
+        private WinFormsApp1.Clases.ComboBox01 cb_codigoPrestacion;
+        private WinFormsApp1.Clases.ComboBox01 cb_numeroElemento;
+        private WinFormsApp1.Clases.ComboBox01 cb_codigoTipo;
+        private WinFormsApp1.Clases.ComboBox01 cb_matricula;
+        private WinFormsApp1.Clases.ComboBox01 cb_numeroExped;
+        private MaskedTextBox mkt_id;
+        private RadioButton rb_nroAfiliado;
+        private RadioButton rb_codigoCategoria;
+        private RadioButton rb_codigoPrestacion;
+        private RadioButton rb_nroElemento;
+        private RadioButton rb_fechaAtención;
+        private RadioButton rb_matricula;
+        private RadioButton rb_codigoDocumento;
+        private RadioButton rb_numeroExpediente;
+        private RadioButton cb_id;
+        private RadioButton rb_todos;
+        private Button button1;
+        private DataGridViewTextBoxColumn _id;
         private DataGridViewTextBoxColumn NroAfiliado;
         private DataGridViewTextBoxColumn CodigoCategoria;
         private DataGridViewTextBoxColumn CodigoPrestacion;
@@ -402,13 +486,5 @@
         private DataGridViewTextBoxColumn CodigoDocumento;
         private DataGridViewTextBoxColumn Matricula;
         private DataGridViewTextBoxColumn NumeroExpediente;
-        private RadioButton rb_nroAfiliado;
-        private RadioButton rb_codigoPrestacion;
-        private RadioButton rb_codigoCategoria;
-        private RadioButton rb_fechaAtención;
-        private RadioButton rb_nroElemento;
-        private RadioButton rb_codigoDocumento;
-        private RadioButton rb_matricula;
-        private RadioButton rb_numeroExpediente;
     }
 }

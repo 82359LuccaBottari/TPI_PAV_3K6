@@ -14,7 +14,8 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
 {
     public partial class Frm_ABM_Prestaciones : Form
     {
-        
+        public enum Resultado { correcto, error }
+
         public Frm_ABM_Prestaciones()
         {
             InitializeComponent();
@@ -46,6 +47,8 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
                 return;
 
             }
+            
+        
 
             //FILTRO CODIGO PRESTACION
 
@@ -100,6 +103,27 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
             {
 
                 tabla = prestaciones.Recuperar_Patron_CodigoPrestacion(codigo);
+                if (tabla.Rows.Count > 0)
+                {
+
+                    MessageBox.Show("Codigo de prestación ya utilizado");
+                    mkt_codigoPrestacion.Focus();
+                }
+                else
+                {
+                    if (txt_Descripcion.Text != "" && mkt_edad.Text != "")
+                    {
+                        prestaciones.Insetar();
+                        MessageBox.Show("Prestación agregada");
+                        LimpiarCampos();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Complete campos");
+                    }
+
+                }
             }
             else
             {
@@ -108,27 +132,7 @@ namespace TPPAV1_Auditoria.Formularios.Prestaciones
                 return;
             }
 
-            if (tabla.Rows.Count > 0)
-            {
-
-                MessageBox.Show("Codigo de prestación ya utilizado");
-                mkt_codigoPrestacion.Focus();
-            }
-            else
-            {
-                if (txt_Descripcion.Text != "" && mkt_edad.Text != "")
-                {
-                    prestaciones.Insetar();
-                    MessageBox.Show("Prestación agregada");
-                    LimpiarCampos();
-
-                }
-                else
-                {
-                    MessageBox.Show("Complete campos");
-                }
-
-            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)

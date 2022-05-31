@@ -4,6 +4,8 @@ using TPPAV1_Auditoria.Formularios.Reintegros;
 using TPPAV1_Auditoria.Formularios.Atenciones;
 using TPPAV1_Auditoria.Formularios.Afiliados;
 using TPPAV1_Auditoria.Formularios.Expedientes;
+using TPPAV1_Auditoria.Estadística.PrestacionesXElemento;
+using TPPAV1_Auditoria.Estadística.DocumentoXPrestaciones;
 namespace WinFormsApp1
 {
     public partial class Frm_Inicio : Form
@@ -91,7 +93,8 @@ namespace WinFormsApp1
 
         private void prestacionesPorElementosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Frm_ESTAD_PrestXElem pXe = new Frm_ESTAD_PrestXElem();
+            pXe.ShowDialog();
         }
 
         private void elementosPorPrestacionesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,7 +104,8 @@ namespace WinFormsApp1
 
         private void documentosPorPrestacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Frm_ESTAD_DocXPrest dXp = new Frm_ESTAD_DocXPrest();
+            dXp.ShowDialog();
         }
 
         private void odontologoPorTipoToolStripMenuItem_Click(object sender, EventArgs e)

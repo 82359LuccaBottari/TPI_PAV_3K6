@@ -22,5 +22,5 @@ namespace WinFormsApp1.Clases
             this.ValueMember = Pp_Pk;
             this.DataSource = _BD.EjecutarSelect(sql);
         }
-    }
+    }   
 }
